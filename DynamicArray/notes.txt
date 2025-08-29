@@ -1,0 +1,1 @@
+理解realloc、malloc函数的作用
