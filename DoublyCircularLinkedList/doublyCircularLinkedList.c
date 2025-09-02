@@ -86,14 +86,14 @@ void list_append(Node** head, int data){
         *head = node;
     }else {
         Node* tail = (*head)->prev;
-        // node->prev = tail;
-        // node->next = *head;
-        // (*head)->next = node;
-        // tail->next = node;
-        tail->next = node;
         node->prev = tail;
         node->next = *head;
         (*head)->next = node;
+        tail->next = node;
+        // tail->next = node;
+        // node->prev = tail;
+        // node->next = *head;
+        // (*head)->next = node;
 
     }
 }
