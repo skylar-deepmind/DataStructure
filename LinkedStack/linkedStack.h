@@ -10,9 +10,9 @@ void stack_destroy(Stack** p_stack);
 
 bool stack_push(Stack* stack,const void* element_data);
 
-bool stack_pop(Stack* stack, const void* output_buffer);
+bool stack_pop(Stack* stack, void* output_buffer);
 
-bool stack_peek(const Stack* stack, const void* output_buffer);
+bool stack_peek(const Stack* stack, void* output_buffer);
 
 bool stack_is_empty(const Stack* stack);
 

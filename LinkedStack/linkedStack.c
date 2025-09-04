@@ -3,6 +3,7 @@
 #include "linkedStack.h"
 
 #include <stdio.h>
+#include <time.h>
 
 typedef struct Node {
     void* data;
@@ -44,8 +45,8 @@ void stack_destroy(Stack** p_stack) {
     while (current != NULL) {
         Node* tmp = current;
         current = current->next;
-        free(current->data);
-        free(current);
+        free(tmp->data);
+        free(tmp);
     }
     free(curStack);
     *p_stack = NULL;
@@ -79,7 +80,7 @@ bool stack_push(Stack* stack,const void* element_data) {
     return true;
 }
 
-bool stack_pop(Stack* stack, const void* output_buffer) {
+bool stack_pop(Stack* stack, void* output_buffer) {
     if (stack_is_empty(stack) || output_buffer == NULL) {
         return false;
     }
@@ -96,7 +97,7 @@ bool stack_pop(Stack* stack, const void* output_buffer) {
     return true;
 }
 
-bool stack_peek(const Stack* stack, const void* output_buffer) {
+bool stack_peek(const Stack* stack, void* output_buffer) {
     if (stack_is_empty(stack) || output_buffer == NULL) {
         return false;
     }
