@@ -18,13 +18,16 @@
 
 ```
 DataStructure/
-├── EasySingleLinkedList/         # 单链表实现
-├── DynamicArray/                 # 动态数组
-├── DoublyLinkedList/             # 双向链表
-├── DoublyCircularLinkedList/     # 双向循环链表
-├── SequentialStack/              # 顺序栈
-├── LICENSE                       # MIT 许可文件
-└── README.md                     # 本说明文档
+├── DoublyCircularLinkedList
+├── DoublyLinkedList
+├── DynamicArray
+├── EasySingleLinkedList
+├── LICENSE
+├── LinkedStack
+├── README.md
+├── SequentialStack
+└── SharedStack
+
 ```
 
 ## 特性与优势
